@@ -19,7 +19,9 @@ public class Sorter {
         }
 
     }
-    
+    public static void sort(int array[]){
+        selectionSort(array);
+    }
     // Method that returns the given array sorted in ascending order.
     public static void selectionSort(int[] arr) {
         int indexOfMin;
