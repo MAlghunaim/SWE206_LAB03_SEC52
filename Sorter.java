@@ -19,8 +19,13 @@ public class Sorter {
         }
 
     }
+<<<<<<< HEAD
     public static void sort(int array[]){
         selectionSort(array);
+=======
+    public static void sort1(int arr[]){
+        insertionSort(arr);
+>>>>>>> 88a5dc68e21771e491ad956f4207c419bb83d3d6
     }
     // Method that returns the given array sorted in ascending order.
     public static void selectionSort(int[] arr) {
