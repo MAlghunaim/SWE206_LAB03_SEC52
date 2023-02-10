@@ -39,6 +39,9 @@ public class Sorter {
         return sortedArr;
     }
 
+    public static void sort(int array[]){
+        insertionSort(array);
+    }
     
     public static void insertionSort(int array[]) {
         int n = array.length;
