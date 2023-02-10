@@ -13,10 +13,12 @@ public class Sorter {
             System.out.print(integers[i] + " ");
         }
         System.out.println("\nSorted array:");
-        int[] sortedIntegers = selectionSort(integers);
+        /*
+        int[] sortedIntegers = sort(integers);
         for (int i = 0; i < sortedIntegers.length; i++) {
             System.out.print(sortedIntegers[i] + " ");
         }
+        */
 
     }
 
@@ -37,10 +39,6 @@ public class Sorter {
             sortedArr[indexOfMin] = temp;
         }
         return sortedArr;
-    }
-
-    public static void sort(int array[]){
-        insertionSort(array);
     }
     
     public static void insertionSort(int array[]) {
