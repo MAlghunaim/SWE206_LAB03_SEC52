@@ -5,19 +5,19 @@ public class Sorter {
         System.out.println("Everything is fine.\n Initializing an array of 10 random integers to be sorted.");
         int[] integers = new int[10];
         Random r = new Random();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             integers[i] = r.nextInt(20);
         }
         System.out.println("The unsorted array is: ");
-        for(int i = 0; i < 10; i++) {
-            System.out.print(integers[i]+" ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(integers[i] + " ");
         }
         System.out.println("\nSorted array:");
         int[] sortedIntegers = selectionSort(integers);
-        for(int i = 0; i < sortedIntegers.length; i++) {
+        for (int i = 0; i < sortedIntegers.length; i++) {
             System.out.print(sortedIntegers[i] + " ");
         }
-        
+
     }
 
     // Method that returns the given array sorted in ascending order.
@@ -25,10 +25,10 @@ public class Sorter {
         int[] sortedArr = arr.clone();
         int indexOfMin;
         int temp;
-        for(int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             indexOfMin = i;
-            for(int j = i+1; j<sortedArr.length; j++) {
-                if(sortedArr[j] < sortedArr[indexOfMin]) {
+            for (int j = i + 1; j < sortedArr.length; j++) {
+                if (sortedArr[j] < sortedArr[indexOfMin]) {
                     indexOfMin = j;
                 }
             }
@@ -39,4 +39,30 @@ public class Sorter {
         return sortedArr;
     }
 
+    public static void selectionSort1(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[index]) {
+                    index = j;//searching for lowest index
+                }
+            }
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+    }
+
+    public static void insertionSort(int array[]) {
+        int n = array.length;
+        for (int j = 1; j < n; j++) {
+            int key = array[j];
+            int i = j - 1;
+            while ((i > -1) && (array[i] > key)) {
+                array[i + 1] = array[i];
+                i--;
+            }
+            array[i + 1] = key;
+        }
+    }
 }
