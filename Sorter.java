@@ -13,32 +13,29 @@ public class Sorter {
             System.out.print(integers[i] + " ");
         }
         System.out.println("\nSorted array:");
-        /*
-        int[] sortedIntegers = sort(integers);
-        for (int i = 0; i < sortedIntegers.length; i++) {
-            System.out.print(sortedIntegers[i] + " ");
+        //sort(integers);
+        for (int i = 0; i < integers.length; i++) {
+            System.out.print(integers[i] + " ");
         }
-        */
 
     }
 
     // Method that returns the given array sorted in ascending order.
-    public static int[] selectionSort(int[] arr) {
-        int[] sortedArr = arr.clone();
+    public static void selectionSort(int[] arr) {
         int indexOfMin;
         int temp;
         for (int i = 0; i < arr.length; i++) {
             indexOfMin = i;
-            for (int j = i + 1; j < sortedArr.length; j++) {
-                if (sortedArr[j] < sortedArr[indexOfMin]) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[indexOfMin]) {
                     indexOfMin = j;
                 }
             }
-            temp = sortedArr[i];
-            sortedArr[i] = sortedArr[indexOfMin];
-            sortedArr[indexOfMin] = temp;
+            temp = arr[i];
+            arr[i] = arr[indexOfMin];
+            arr[indexOfMin] = temp;
         }
-        return sortedArr;
+        
     }
     
     public static void insertionSort(int array[]) {
